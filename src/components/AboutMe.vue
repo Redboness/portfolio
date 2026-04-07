@@ -9,9 +9,9 @@
           <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Layda&mood=happy" alt="Layda" class="w-full bg-pink-50" />
         </div>
         <!-- Una tarjetita flotante con un dato curioso -->
-        <div class="absolute -bottom-6 -right-6 bg-white p-6 rounded-3xl shadow-xl z-20 border border-pink-100 animate-float">
+        <div class="absolute -bottom-6 -right-6 bg-white p-6 rounded-3xl shadow-xl z-20 border border-pink-100 animate-float flex flex-col items-center">
           <p class="text-xs font-bold text-primary uppercase tracking-widest">Mi Filosofía</p>
-          <p class="text-secondary font-medium">"Aprender jugando, <br>crecer amando"</p>
+          <p class="text-secondary font-medium text-center">"Aprender jugando, <br>crecer amando"</p>
         </div>
       </div>
 
@@ -25,17 +25,21 @@
         <!-- Pequeña "Línea de vida" o hitos -->
         <div class="space-y-4 pt-4">
           <div class="flex gap-4 items-start">
-            <div class="bg-pink-100 p-2 rounded-full text-pink-500">✨</div>
+            <div class="bg-pink-100 p-2.5 rounded-full text-pink-500">
+              <SparklesIcon :size="18" />
+            </div>
             <div>
               <h4 class="font-bold text-secondary">Compromiso Ético</h4>
-              <p class="text-sm text-gray-500">Investigo para crear aulas donde cada niño se sienta visto y valorado.</p>
+              <p class="text-sm text-gray-500">Investigación centrada en la dignidad y el valor de cada estudiante.</p>
             </div>
           </div>
           <div class="flex gap-4 items-start">
-            <div class="bg-purple-100 p-2 rounded-full text-purple-500">🎨</div>
+            <div class="bg-purple-100 p-2.5 rounded-full text-purple-500">
+              <PaletteIcon :size="18" />
+            </div>
             <div>
               <h4 class="font-bold text-secondary">Enfoque Creativo</h4>
-              <p class="text-sm text-gray-500">Creo que el arte es el lenguaje natural de la infancia.</p>
+              <p class="text-sm text-gray-500">Integración del arte como lenguaje natural en la etapa infantil.</p>
             </div>
           </div>
         </div>
@@ -43,16 +47,16 @@
         <div class="pt-6">
           <div class="stats shadow-sm bg-white border border-pink-50 rounded-3xl w-full">
             <div class="stat place-items-center">
-              <div class="stat-title text-xs">Años de Pasión</div>
-              <div class="stat-value text-primary text-2xl">5+</div>
+              <div class="stat-title text-[10px] font-bold uppercase tracking-tight">Experiencia</div>
+              <div class="stat-value text-primary text-2xl">5+ años</div>
             </div>
             <div class="stat place-items-center border-x border-pink-50">
-              <div class="stat-title text-xs">Proyectos</div>
-              <div class="stat-value text-secondary text-2xl">12</div>
+              <div class="stat-title text-[10px] font-bold uppercase tracking-tight">Investigación</div>
+              <div class="stat-value text-secondary text-2xl">12 hitos</div>
             </div>
             <div class="stat place-items-center">
-              <div class="stat-title text-xs">Sonrisas</div>
-              <div class="stat-value text-pink-400 text-2xl">∞</div>
+              <div class="stat-title text-[10px] font-bold uppercase tracking-tight">Impacto</div>
+              <div class="stat-value text-pink-400 text-2xl">Continuo</div>
             </div>
           </div>
         </div>
@@ -61,6 +65,9 @@
     </div>
   </section>
 </template>
+<script setup>
+import { SparklesIcon, PaletteIcon, GraduationCapIcon, MicroscopeIcon } from 'lucide-vue-next'
+</script>
 
 <style scoped>
 @keyframes float {

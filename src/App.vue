@@ -49,7 +49,7 @@
               </p>
               <button @click="currentSection = 'cv'" class="mt-10 bg-slate-900 text-white hover:bg-pink-600 transition-colors rounded-2xl px-10 py-4 font-bold shadow-lg">Ver mi Trayectoria</button>
             </div>
-            <span class="absolute right-[-20px] bottom-[-20px] text-[15rem] opacity-[0.03] rotate-12 pointer-events-none">🍎</span>
+            <GraduationCapIcon :size="240" class="absolute right-[-40px] bottom-[-40px] opacity-[0.03] rotate-12 pointer-events-none text-slate-900" />
           </div>
 
           <!-- IMPACTO -->
@@ -58,20 +58,26 @@
             <ResearchStats />
           </div>
 
-          <!-- HITOS -->
+          <!-- HITOS (RESUMEN RÁPIDO) -->
           <div class="col-span-12 mt-4">
-            <h2 class="text-2xl font-black text-slate-800 mb-8">Hitos de Investigación</h2>
+            <h2 class="text-2xl font-black text-slate-800 mb-8">Hitos Significativos</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div class="p-8 rounded-[2.5rem] bg-white border border-slate-100 hover:border-pink-200 transition-all shadow-sm">
-                <span class="bg-pink-50 text-pink-600 text-[10px] font-black px-3 py-1 rounded-full uppercase">Matrícula de Honor</span>
-                <h4 class="font-bold text-xl text-slate-800 mt-4">Trauma Infantil y Barreras de Aprendizaje</h4>
-                <p class="text-slate-500 mt-3 text-sm leading-relaxed italic">Investigación cualitativa y diseño de estrategias psicoeducativas para escuela y familia.</p>
+                <span class="bg-pink-50 text-pink-600 text-[10px] font-black px-3 py-1 rounded-full uppercase">Investigación</span>
+                <h4 class="font-bold text-xl text-slate-800 mt-4">Trauma y Aprendizaje</h4>
+                <p class="text-slate-500 mt-3 text-sm leading-relaxed italic">Publicación sobre barreras de aprendizaje con Matrícula de Honor.</p>
               </div>
               <div class="p-8 rounded-[2.5rem] bg-white border border-slate-100 hover:border-pink-200 transition-all shadow-sm">
-                <span class="bg-slate-100 text-slate-600 text-[10px] font-black px-3 py-1 rounded-full uppercase">Innovación EdTech</span>
-                <h4 class="font-bold text-xl text-slate-800 mt-4">Chatbot Socrático con IA</h4>
-                <p class="text-slate-500 mt-3 text-sm leading-relaxed italic">Desarrollo de un asistente para el fomento de la alfabetización mediática.</p>
+                <span class="bg-slate-100 text-slate-600 text-[10px] font-black px-3 py-1 rounded-full uppercase">Innovación</span>
+                <h4 class="font-bold text-xl text-slate-800 mt-4">Pimpoyo: Chatbot IA</h4>
+                <p class="text-slate-500 mt-3 text-sm leading-relaxed italic">Desarrollo de herramientas digitales para el pensamiento crítico.</p>
               </div>
+            </div>
+            <div class="mt-8 text-center">
+              <button @click="currentSection = 'investigacion'" class="text-pink-600 font-bold text-sm hover:underline flex items-center gap-2 mx-auto">
+                <span>Explorar investigación detallada</span>
+                <ArrowRightIcon :size="16" />
+              </button>
             </div>
           </div>
         </div>
@@ -144,6 +150,7 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import { gsap } from 'gsap'
+import { GraduationCapIcon, ArrowRightIcon } from 'lucide-vue-next'
 import SideNav from './components/SideNav.vue'
 import ResearchStats from './components/ResearchStats.vue'
 import ResearchGallery from './components/ResearchGallery.vue'
@@ -153,9 +160,11 @@ import TheFooter from './components/TheFooter.vue'
 const currentSection = ref('inicio')
 
 const experiencia = [
-  { fecha: 'ACTUAL', puesto: 'Asistente de Fotografía Infantil', lugar: 'Analkanewborn', desc: 'Manejo de recién nacidos y gestión de atención a familias.' },
-  { fecha: '6 MESES', puesto: 'Prácticas Docentes', lugar: 'CEIP Gonzalo de Berceo / Pablo Neruda', desc: 'Liderazgo de asambleas y diseño de ambientes de aprendizaje.' },
-  { fecha: '1 AÑO', puesto: 'Profesora Voluntaria', lugar: 'Cruz Roja Española', desc: 'Acompañamiento emocional y atención a la diversidad.' }
+  { fecha: 'OCT 2024 - ACT', puesto: 'Profesora de Inglés', lugar: 'Colegio ADDIS / Mater Purissima', desc: 'Diseño de sesiones dinámicas e inmersión total lingüística.' },
+  { fecha: 'JUL 2024 - ACT', puesto: 'Asistente de Fotografía Infantil', lugar: 'Analkanewborn', desc: 'Atención a recién nacidos y coordinación profesional con familias.' },
+  { fecha: '1 AÑO', puesto: 'Voluntariado Docente', lugar: 'Cruz Roja Española', desc: 'Acompañamiento emocional, atención a la diversidad y planificación lúdica.' },
+  { fecha: '6 MESES', puesto: 'Prácticas de Intervención', lugar: 'CEIP El Guernica / Pablo Neruda', desc: 'Liderazgo docente, diseño de ambientes y evaluación pedagógica.' },
+  { fecha: '3 AÑOS', puesto: 'Administración y Recepción', lugar: 'DHL / Inditex / Haitong Bank', desc: 'Gestión administrativa, atención al cliente y logística.' }
 ]
 
 const transversalSkills = [
@@ -163,9 +172,10 @@ const transversalSkills = [
 ]
 
 const formacion = [
-  { fecha: '2024-2025', titulo: 'Máster Investigación', lugar: 'UNED' },
+  { fecha: '2024-2025', titulo: 'Máster Investigación e Innovación', lugar: 'UNED' },
   { fecha: '2020-2024', titulo: 'Grado Magisterio Infantil', lugar: 'Univ. de Alcalá (UAH)' },
-  { fecha: '2023', titulo: 'Front-End Dev', lugar: 'FreeCodeCamp' }
+  { fecha: '2023', titulo: 'Curso Front-End Dev', lugar: 'FreeCodeCamp' },
+  { fecha: '2018-2020', titulo: 'Bachillerato Ciencias Sociales', lugar: 'Mater Purissima' }
 ]
 
 onMounted(() => {

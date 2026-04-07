@@ -1,67 +1,78 @@
 <template>
-  <section class="py-24 px-8 max-w-7xl mx-auto">
+  <section class="max-w-7xl mx-auto py-10 px-4 md:px-8 space-y-16">
+    
     <!-- Título de la sección -->
-    <div class="text-center mb-16 space-y-4">
-      <h2 class="text-4xl font-black text-secondary">Mis Hitos Académicos</h2>
-      <p class="text-primary font-medium italic">El fruto de mi esfuerzo y dedicación en la educación</p>
-      <div class="w-24 h-1.5 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
+    <div class="text-center space-y-4">
+      <h2 class="text-4xl font-black text-slate-800 tracking-tight">Hitos Académicos e Investigación</h2>
+      <p class="text-pink-600 font-bold uppercase tracking-widest text-[10px]">Compromiso con la formación y la innovación</p>
+      <div class="w-16 h-1 bg-pink-100 mx-auto rounded-full mt-4"></div>
     </div>
 
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+    <!-- Contenedor de Proyectos -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
       
-      <!-- TARJETA TFG (Trabajo de Fin de Grado) -->
-      <div class="group bg-white rounded-[3.5rem] overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-pink-50 relative">
-        <!-- Etiqueta flotante -->
-        <div class="absolute top-6 right-6 bg-pink-100 text-pink-600 text-[10px] font-bold px-4 py-1 rounded-full z-20">GRADO</div>
+      <!-- TARJETA TFG -->
+      <div class="group bg-white rounded-[3rem] overflow-hidden border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-500 p-8 md:p-12 space-y-8">
+        <div class="flex justify-between items-start">
+          <span class="bg-pink-50 text-pink-600 text-[10px] font-black px-4 py-1.5 rounded-full uppercase tracking-widest border border-pink-100">Matrícula de Honor | TFG</span>
+          <GraduationCapIcon :size="24" class="opacity-30 group-hover:opacity-100 transition-opacity" />
+        </div>
         
-        <div class="flex flex-col md:flex-row h-full">
-          <!-- Lado Visual -->
-          <div class="md:w-1/3 bg-gradient-to-br from-pink-50 to-rose-100 flex items-center justify-center p-8">
-            <div class="relative">
-              <span class="text-7xl group-hover:rotate-12 transition-transform duration-500 block">🎓</span>
-              <span class="absolute -bottom-2 -right-2 text-2xl animate-bounce">✨</span>
-            </div>
-          </div>
-          
-          <!-- Lado Texto -->
-          <div class="p-8 md:w-2/3 space-y-4">
-            <h3 class="text-2xl font-bold text-secondary group-hover:text-primary transition-colors">TFG: Mi primer paso</h3>
-            <p class="text-gray-500 text-sm leading-relaxed">
-              Aquí puedes poner el título real de tu TFG. Por ejemplo: "Estrategias lúdicas para la lectoescritura en el aula de 5 años".
-            </p>
-            <div class="pt-4 flex items-center gap-4">
-              <button class="btn btn-primary btn-sm rounded-full px-6 shadow-md">Ver Resumen</button>
-              <span class="text-xs font-bold text-pink-300">Calificación: Sobresaliente 🌟</span>
-            </div>
+        <div class="space-y-4">
+          <h3 class="text-3xl font-black text-slate-900 leading-tight">Trauma Infantil y Barreras de Aprendizaje</h3>
+          <p class="text-slate-500 leading-relaxed text-sm lg:text-base italic">
+            Investigación cualitativa: Análisis de las barreras de aprendizaje de la infancia (revisión bibliográfica y estudio de caso).
+          </p>
+        </div>
+
+        <div class="pt-8 border-t border-slate-50 flex items-center justify-between">
+          <a href="/assets/TFG_LaydaLopez.pdf" target="_blank" 
+            class="inline-flex items-center gap-3 bg-slate-900 text-white hover:bg-pink-600 transition-all rounded-2xl px-8 py-4 font-bold shadow-lg text-sm group">
+            <span>Memoria TFG</span>
+            <ArrowRightIcon :size="16" class="opacity-40 group-hover:translate-x-1 transition-transform" />
+          </a>
+          <div class="text-right">
+            <p class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Calificación</p>
+            <p class="text-pink-600 font-bold text-sm">Matrícula de Honor</p>
           </div>
         </div>
       </div>
 
-      <!-- TARJETA TFM (Trabajo de Fin de Máster) -->
-      <div class="group bg-white rounded-[3.5rem] overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-purple-50 relative">
-        <!-- Etiqueta flotante -->
-        <div class="absolute top-6 right-6 bg-purple-100 text-purple-600 text-[10px] font-bold px-4 py-1 rounded-full z-20">MÁSTER</div>
+      <!-- TARJETA TFM (PIMPOYO) -->
+      <div class="group bg-pink-50/30 rounded-[3rem] overflow-hidden border border-pink-100/50 shadow-sm hover:shadow-xl transition-all duration-500 p-8 md:p-12 space-y-8">
+        <div class="flex justify-between items-start">
+          <span class="bg-white text-pink-700 text-[10px] font-black px-4 py-1.5 rounded-full uppercase tracking-widest border border-pink-100">Innovación EdTech | TFM</span>
+          <BotIcon :size="24" class="opacity-30 group-hover:opacity-100 transition-opacity" />
+        </div>
         
-        <div class="flex flex-col md:flex-row h-full">
-          <!-- Lado Visual -->
-          <div class="md:w-1/3 bg-gradient-to-br from-purple-50 to-pink-100 flex items-center justify-center p-8">
-            <div class="relative">
-              <span class="text-7xl group-hover:scale-110 transition-transform duration-500 block">🔬</span>
-              <span class="absolute -top-2 -left-2 text-2xl animate-pulse">💡</span>
-            </div>
-          </div>
-          
-          <!-- Lado Texto -->
-          <div class="p-8 md:w-2/3 space-y-4">
-            <h3 class="text-2xl font-bold text-secondary group-hover:text-primary transition-colors">TFM: Especialización</h3>
-            <p class="text-gray-500 text-sm leading-relaxed">
-              Escribe aquí el título de tu Máster. Por ejemplo: "Neuroeducación aplicada al bienestar emocional en el segundo ciclo de infantil".
-            </p>
-            <div class="pt-4 flex items-center gap-4">
-              <button class="btn btn-secondary btn-sm rounded-full px-6 shadow-md">Ver Proyecto</button>
-              <span class="text-xs font-bold text-purple-300">Investigación Avanzada 📚</span>
-            </div>
-          </div>
+        <div class="space-y-4">
+          <h3 class="text-3xl font-black text-slate-900 leading-tight">Pimpoyo: Chatbot Socrático con IA</h3>
+          <p class="text-slate-500 leading-relaxed text-sm lg:text-base italic">
+            Diseño y desarrollo de un asistente educativo innovador para el fomento de la alfabetización mediática y el pensamiento crítico.
+          </p>
+        </div>
+
+        <!-- Reproductor de Vídeo -->
+        <div class="aspect-video w-full bg-white rounded-3xl overflow-hidden shadow-2xl relative border border-white/50 group-hover:scale-[1.02] transition-transform duration-500">
+          <iframe 
+            src="https://drive.google.com/file/d/1VLsdmZDxlop9Y-SVq7QYy3kHp9aA8fbT/preview" 
+            class="absolute inset-0 w-full h-full border-0" 
+            allow="autoplay"
+            loading="lazy">
+          </iframe>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4 pt-4">
+          <a href="/assets/LopezLora_Layda_TFM.pdf" target="_blank" 
+            class="flex flex-col items-center gap-2 bg-white hover:bg-slate-900 hover:text-white transition-all rounded-3xl p-5 border border-slate-100 text-center shadow-sm group/btn">
+            <FolderOpenIcon :size="20" class="text-slate-400 group-hover/btn:text-white" />
+            <span class="text-[10px] font-black uppercase tracking-widest opacity-80">Memoria TFM</span>
+          </a>
+          <a href="/assets/Guia_informativa_Pimpoyo.pdf" target="_blank" 
+            class="flex flex-col items-center gap-2 bg-pink-500 hover:bg-pink-600 text-white transition-all rounded-3xl p-5 border border-pink-400 text-center shadow-lg">
+            <BookIcon :size="20" />
+            <span class="text-[10px] font-black uppercase tracking-widest">Guía Pimpoyo</span>
+          </a>
         </div>
       </div>
 

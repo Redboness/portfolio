@@ -38,8 +38,10 @@
 
       <!-- Línea final de Copyright -->
       <div class="border-t border-pink-50 pt-8 text-center">
-        <p class="text-xs text-gray-400">
-          &copy; 2024 Layda Portfolio. Hecho con 🌸 y mucha dedicación.
+        <p class="text-xs text-gray-400 flex items-center justify-center gap-1">
+          <span>&copy; 2024 Layda Portfolio. Hecho con</span>
+          <HeartIcon :size="12" class="text-pink-400 fill-pink-400" />
+          <span>y mucha dedicación.</span>
         </p>
       </div>
     </div>

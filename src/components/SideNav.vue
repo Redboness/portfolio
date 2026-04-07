@@ -14,33 +14,37 @@
       <button 
         @click="$emit('change-section', 'inicio')"
         :class="activeSection === 'inicio' ? 'bg-white text-secondary shadow-lg scale-105' : 'bg-white/10 hover:bg-white/20'"
-        class="flex items-center gap-4 w-full p-3 rounded-xl transition-all duration-300 font-bold text-left"
+        class="flex items-center gap-4 w-full p-3 rounded-xl transition-all duration-300 font-bold text-left group"
       >
-        <span class="text-xl">🏠</span> Inicio
+        <HomeIcon :size="20" :class="activeSection === 'inicio' ? 'text-secondary' : 'text-white/70'" />
+        <span>Inicio</span>
       </button>
 
       <button 
         @click="$emit('change-section', 'cv')"
         :class="activeSection === 'cv' ? 'bg-white text-secondary shadow-lg scale-105' : 'bg-white/10 hover:bg-white/20'"
-        class="flex items-center gap-4 w-full p-3 rounded-xl transition-all duration-300 font-bold text-left"
+        class="flex items-center gap-4 w-full p-3 rounded-xl transition-all duration-300 font-bold text-left group"
       >
-        <span class="text-xl">📄</span> Currículum
+        <FileTextIcon :size="20" :class="activeSection === 'cv' ? 'text-secondary' : 'text-white/70'" />
+        <span>Currículum</span>
       </button>
 
       <button 
         @click="$emit('change-section', 'investigacion')"
         :class="activeSection === 'investigacion' ? 'bg-white text-secondary shadow-lg scale-105' : 'bg-white/10 hover:bg-white/20'"
-        class="flex items-center gap-4 w-full p-3 rounded-xl transition-all duration-300 font-bold text-left"
+        class="flex items-center gap-4 w-full p-3 rounded-xl transition-all duration-300 font-bold text-left group"
       >
-        <span class="text-xl">📊</span> Investigación
+        <FlaskConicalIcon :size="20" :class="activeSection === 'investigacion' ? 'text-secondary' : 'text-white/70'" />
+        <span>Investigación</span>
       </button>
 
       <button 
         @click="$emit('change-section', 'contacto')"
         :class="activeSection === 'contacto' ? 'bg-white text-secondary shadow-lg scale-105' : 'bg-white/10 hover:bg-white/20'"
-        class="flex items-center gap-4 w-full p-3 rounded-xl transition-all duration-300 font-bold text-left"
+        class="flex items-center gap-4 w-full p-3 rounded-xl transition-all duration-300 font-bold text-left group"
       >
-        <span class="text-xl">✉️</span> Contacto
+        <MailIcon :size="20" :class="activeSection === 'contacto' ? 'text-secondary' : 'text-white/70'" />
+        <span>Contacto</span>
       </button>
     </nav>
 
@@ -55,8 +59,8 @@
           :class="activeMode === 'normal' ? 'bg-primary border-primary' : 'bg-white/5 border-transparent'"
           class="text-[10px] p-2.5 rounded-lg hover:bg-white/10 transition-all flex items-center gap-3 border"
         >
-          <span class="text-sm">✨</span> 
-          <span class="font-bold">Modo Estándar</span>
+          <SparklesIcon :size="14" class="opacity-70" />
+          <span class="font-bold uppercase tracking-tight">Modo Estándar</span>
         </button>
 
         <!-- Modo TDAH -->
@@ -65,8 +69,8 @@
           :class="activeMode === 'tdah' ? 'bg-primary border-primary' : 'bg-white/5 border-transparent'"
           class="text-[10px] p-2.5 rounded-lg hover:bg-white/10 transition-all flex items-center gap-3 border"
         >
-          <span class="text-sm">🎯</span> 
-          <span class="font-bold">Enfoque (TDAH)</span>
+          <TargetIcon :size="14" class="opacity-70" />
+          <span class="font-bold uppercase tracking-tight">Enfoque (TDAH)</span>
         </button>
 
         <!-- Modo Autismo -->
@@ -75,15 +79,15 @@
           :class="activeMode === 'autismo' ? 'bg-primary border-primary' : 'bg-white/5 border-transparent'"
           class="text-[10px] p-2.5 rounded-lg hover:bg-white/10 transition-all flex items-center gap-3 border"
         >
-          <span class="text-sm">🧩</span> 
-          <span class="font-bold">Sensorial (Autismo)</span>
+          <PuzzleIcon :size="14" class="opacity-70" />
+          <span class="font-bold uppercase tracking-tight">Sensorial (Autismo)</span>
         </button>
       </div>
 
-      <!-- Botón de Lectura Fácil (Opcional) -->
+      <!-- Botón de Lectura Fácil -->
       <button class="flex items-center justify-between w-full p-2.5 rounded-lg bg-white/5 hover:bg-white/10 text-[10px] transition-all mt-2">
-        <span class="font-bold">Lectura Fácil</span>
-        <span>📖</span>
+        <span class="font-bold uppercase tracking-tight">Lectura Fácil</span>
+        <BookOpenIcon :size="14" class="opacity-70" />
       </button>
     </div>
 
@@ -91,6 +95,17 @@
 </template>
 
 <script setup>
+import { 
+  HomeIcon, 
+  FileTextIcon, 
+  FlaskConicalIcon, 
+  MailIcon, 
+  SparklesIcon, 
+  TargetIcon, 
+  PuzzleIcon, 
+  BookOpenIcon 
+} from 'lucide-vue-next'
+
 // Recibimos la sección y el modo activo desde App.vue
 defineProps({
   activeSection: String,

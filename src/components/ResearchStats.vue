@@ -3,7 +3,8 @@
     <!-- Gráfico de Líneas: Evolución de Investigaciones -->
     <div class="bg-white p-6 rounded-[2.5rem] shadow-sm border border-pink-100">
       <h3 class="text-secondary font-bold mb-4 flex items-center gap-2">
-        <span>📈</span> Actividad Investigadora
+        <TrendingUpIcon :size="18" class="text-pink-500" />
+        <span>Actividad Investigadora</span>
       </h3>
       <div class="h-[250px]">
         <Line :data="lineData" :options="chartOptions" />
@@ -13,7 +14,8 @@
     <!-- Gráfico de Tarta: Áreas de Especialización -->
     <div class="bg-white p-6 rounded-[2.5rem] shadow-sm border border-pink-100">
       <h3 class="text-secondary font-bold mb-4 flex items-center gap-2">
-        <span>🎯</span> Áreas de Enfoque
+        <TargetIcon :size="18" class="text-pink-500" />
+        <span>Áreas de Enfoque</span>
       </h3>
       <div class="h-[250px] flex justify-center">
         <Doughnut :data="doughnutData" :options="chartOptions" />
@@ -35,6 +37,7 @@ import {
   ArcElement
 } from 'chart.js'
 import { Line, Doughnut } from 'vue-chartjs'
+import { TrendingUpIcon, TargetIcon } from 'lucide-vue-next'
 
 ChartJS.register(
   CategoryScale,

@@ -5,12 +5,12 @@
       <div class="bg-white rounded-[3rem] shadow-2xl overflow-hidden flex flex-col md:flex-row border border-pink-100">
         
         <!-- Lado Izquierdo: Mensaje Amigable -->
-        <div class="md:w-1/3 bg-secondary p-10 text-white flex flex-col justify-center space-y-6">
-          <h2 class="text-3xl font-bold">¿Hablamos? 💌</h2>
-          <p class="text-pink-100 text-sm leading-relaxed">
-            Si tienes alguna duda sobre mis investigaciones o quieres colaborar en un proyecto educativo, ¡me encantaría leerte!
+        <div class="md:w-1/3 bg-secondary p-10 text-white flex flex-col justify-center items-center md:items-start space-y-6">
+          <MailIcon :size="48" class="text-pink-400 mb-2" />
+          <h2 class="text-3xl font-bold">¿Hablamos?</h2>
+          <p class="text-pink-100 text-sm leading-relaxed text-center md:text-left">
+            Si tienes alguna consulta sobre mis investigaciones o quieres colaborar en un proyecto educativo, me encantaría leerte.
           </p>
-          <div class="text-5xl animate-bounce text-center">✉️</div>
         </div>
 
         <!-- Lado Derecho: El Formulario -->
@@ -32,8 +32,9 @@
               <textarea class="textarea textarea-bordered w-full rounded-3xl border-pink-100 focus:border-primary h-32" placeholder="Cuéntame en qué puedo ayudarte..."></textarea>
             </div>
 
-            <button type="submit" class="btn btn-primary w-full rounded-full shadow-lg hover:scale-105 transition-transform">
-              Enviar Mensaje Mágico ✨
+            <button type="submit" class="btn btn-primary w-full rounded-full shadow-lg hover:scale-105 transition-transform flex items-center justify-center gap-2">
+              <MessageSquareIcon :size="18" />
+              <span>Enviar Mensaje Profesional</span>
             </button>
             
           </form>
@@ -45,7 +46,9 @@
 </template>
 
 <script setup>
+import { MailIcon, MessageSquareIcon } from 'lucide-vue-next'
+
 const handleSubmit = () => {
-  alert("¡Gracias Layda! (Esto es una prueba, el mensaje se enviaría aquí) 🌸");
+  alert("Gracias por tu interés. En un entorno real, este formulario enviaría tus datos a mi correo.");
 }
 </script>
