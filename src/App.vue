@@ -119,13 +119,13 @@
               </div>
             </div>
             <!-- Formación Rápida -->
-            <div class="bg-slate-900 text-white p-8 rounded-[2.5rem] shadow-xl">
+            <div class="bg-white p-8 rounded-[2.5rem] shadow-sm border border-slate-100">
               <h4 class="text-pink-500 font-black text-xs uppercase mb-6">Formación destacada</h4>
               <div class="space-y-6">
-                <div v-for="edu in formacion" :key="edu.titulo" class="border-l border-white/20 pl-4">
-                  <p class="text-[10px] font-bold opacity-50">{{edu.fecha}}</p>
-                  <p class="font-bold text-sm">{{edu.titulo}}</p>
-                  <p class="text-[10px] opacity-50">{{edu.lugar}}</p>
+                <div v-for="edu in formacion" :key="edu.titulo" class="border-l-2 border-pink-100 pl-4">
+                  <p class="text-[10px] font-bold text-slate-400">{{edu.fecha}}</p>
+                  <p class="font-bold text-sm text-slate-800">{{edu.titulo}}</p>
+                  <p class="text-[10px] text-slate-500">{{edu.lugar}}</p>
                 </div>
               </div>
             </div>
