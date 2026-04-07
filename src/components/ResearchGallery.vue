@@ -3,7 +3,7 @@
     
     <!-- Título de la sección -->
     <div class="text-center space-y-4">
-      <h2 class="text-4xl font-black text-slate-800 tracking-tight">Hitos Académicos e Investigación</h2>
+      <h2 class="text-4xl font-black text-slate-800 tracking-tight">Hitos académicos e investigación</h2>
       <p class="text-pink-600 font-bold uppercase tracking-widest text-[10px]">Compromiso con la formación y la innovación</p>
       <div class="w-16 h-1 bg-pink-100 mx-auto rounded-full mt-4"></div>
     </div>
@@ -19,7 +19,7 @@
         </div>
         
         <div class="space-y-4">
-          <h3 class="text-3xl font-black text-slate-900 leading-tight">Trauma Infantil y Barreras de Aprendizaje</h3>
+          <h3 class="text-3xl font-black text-slate-900 leading-tight">Trauma infantil y barreras de aprendizaje</h3>
           <p class="text-slate-500 leading-relaxed text-sm lg:text-base italic">
             Investigación cualitativa: Análisis de las barreras de aprendizaje de la infancia (revisión bibliográfica y estudio de caso).
           </p>
@@ -33,7 +33,7 @@
           </a>
           <div class="text-right">
             <p class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Calificación</p>
-            <p class="text-pink-600 font-bold text-sm">Matrícula de Honor</p>
+            <p class="text-pink-600 font-bold text-sm">Matrícula de honor</p>
           </div>
         </div>
       </div>

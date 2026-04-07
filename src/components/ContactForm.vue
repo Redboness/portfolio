@@ -18,23 +18,23 @@
           <form @submit.prevent="handleSubmit" class="space-y-6">
             
             <div class="form-control">
-              <label class="label"><span class="label-text font-bold text-secondary">Tu Nombre</span></label>
+              <label class="label"><span class="label-text font-bold text-secondary">Tu nombre</span></label>
               <input type="text" placeholder="¿Cómo te llamas?" class="input input-bordered w-full rounded-2xl border-pink-100 focus:border-primary focus:ring-primary" />
             </div>
 
             <div class="form-control">
-              <label class="label"><span class="label-text font-bold text-secondary">Correo Electrónico</span></label>
+              <label class="label"><span class="label-text font-bold text-secondary">Correo electrónico</span></label>
               <input type="email" placeholder="ejemplo@correo.com" class="input input-bordered w-full rounded-2xl border-pink-100 focus:border-primary" />
             </div>
 
             <div class="form-control">
-              <label class="label"><span class="label-text font-bold text-secondary">Tu Mensaje</span></label>
+              <label class="label"><span class="label-text font-bold text-secondary">Tu mensaje</span></label>
               <textarea class="textarea textarea-bordered w-full rounded-3xl border-pink-100 focus:border-primary h-32" placeholder="Cuéntame en qué puedo ayudarte..."></textarea>
             </div>
 
             <button type="submit" class="btn btn-primary w-full rounded-full shadow-lg hover:scale-105 transition-transform flex items-center justify-center gap-2">
               <MessageSquareIcon :size="18" />
-              <span>Enviar Mensaje Profesional</span>
+              <span>Enviar mensaje profesional</span>
             </button>
             
           </form>

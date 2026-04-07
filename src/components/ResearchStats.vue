@@ -4,7 +4,7 @@
     <div class="bg-white p-6 rounded-[2.5rem] shadow-sm border border-pink-100">
       <h3 class="text-secondary font-bold mb-4 flex items-center gap-2">
         <TrendingUpIcon :size="18" class="text-pink-500" />
-        <span>Actividad Investigadora</span>
+        <span>Actividad investigadora</span>
       </h3>
       <div class="h-[250px]">
         <Line :data="lineData" :options="chartOptions" />
@@ -15,7 +15,7 @@
     <div class="bg-white p-6 rounded-[2.5rem] shadow-sm border border-pink-100">
       <h3 class="text-secondary font-bold mb-4 flex items-center gap-2">
         <TargetIcon :size="18" class="text-pink-500" />
-        <span>Áreas de Enfoque</span>
+        <span>Áreas de enfoque</span>
       </h3>
       <div class="h-[250px] flex justify-center">
         <Doughnut :data="doughnutData" :options="chartOptions" />

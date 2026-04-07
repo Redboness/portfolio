@@ -60,7 +60,7 @@
           class="text-[10px] p-2.5 rounded-lg hover:bg-white/10 transition-all flex items-center gap-3 border"
         >
           <SparklesIcon :size="14" class="opacity-70" />
-          <span class="font-bold uppercase tracking-tight">Modo Estándar</span>
+          <span class="font-bold uppercase tracking-tight">Modo estándar</span>
         </button>
 
         <!-- Modo TDAH -->
@@ -86,7 +86,7 @@
 
       <!-- Botón de Lectura Fácil -->
       <button class="flex items-center justify-between w-full p-2.5 rounded-lg bg-white/5 hover:bg-white/10 text-[10px] transition-all mt-2">
-        <span class="font-bold uppercase tracking-tight">Lectura Fácil</span>
+        <span class="font-bold uppercase tracking-tight">Lectura fácil</span>
         <BookOpenIcon :size="14" class="opacity-70" />
       </button>
     </div>

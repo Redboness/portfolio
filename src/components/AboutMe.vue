@@ -10,7 +10,7 @@
         </div>
         <!-- Una tarjetita flotante con un dato curioso -->
         <div class="absolute -bottom-6 -right-6 bg-white p-6 rounded-3xl shadow-xl z-20 border border-pink-100 animate-float flex flex-col items-center">
-          <p class="text-xs font-bold text-primary uppercase tracking-widest">Mi Filosofía</p>
+          <p class="text-xs font-bold text-primary uppercase tracking-widest">Mi filosofía</p>
           <p class="text-secondary font-medium text-center">"Aprender jugando, <br>crecer amando"</p>
         </div>
       </div>
@@ -29,7 +29,7 @@
               <SparklesIcon :size="18" />
             </div>
             <div>
-              <h4 class="font-bold text-secondary">Compromiso Ético</h4>
+              <h4 class="font-bold text-secondary">Compromiso ético</h4>
               <p class="text-sm text-gray-500">Investigación centrada en la dignidad y el valor de cada estudiante.</p>
             </div>
           </div>
@@ -38,7 +38,7 @@
               <PaletteIcon :size="18" />
             </div>
             <div>
-              <h4 class="font-bold text-secondary">Enfoque Creativo</h4>
+              <h4 class="font-bold text-secondary">Enfoque creativo</h4>
               <p class="text-sm text-gray-500">Integración del arte como lenguaje natural en la etapa infantil.</p>
             </div>
           </div>

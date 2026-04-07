@@ -12,8 +12,8 @@
       <header class="flex justify-between items-center mb-12 border-b pb-6 border-slate-50">
         <div>
           <h2 class="font-bold text-2xl uppercase tracking-tighter text-slate-800">
-            {{ currentSection === 'inicio' ? 'Panel de Impacto' : 
-               currentSection === 'cv' ? 'Currículum Vitae' : 
+            {{ currentSection === 'inicio' ? 'Panel de impacto' : 
+               currentSection === 'cv' ? 'Currículum vitae' : 
                currentSection === 'investigacion' ? 'Investigación' : 'Contacto' }}
           </h2>
         </div>
@@ -26,7 +26,7 @@
           </div>
           <div class="flex flex-col">
             <span class="font-bold text-sm text-slate-800 leading-none">Layda López</span>
-            <span class="text-[10px] text-slate-500 font-medium">Maestra e Investigadora</span>
+            <span class="text-[10px] text-slate-500 font-medium">Maestra e investigadora</span>
           </div>
         </div>
       </header>
@@ -40,27 +40,27 @@
           <!-- HERO -->
           <div class="col-span-12 lg:col-span-8 bg-gradient-to-br from-white to-slate-50 p-12 rounded-[3rem] border border-slate-100 shadow-sm relative overflow-hidden">
             <div class="relative z-10">
-              <div class="inline-block bg-pink-100 text-pink-700 mb-6 px-4 py-1 rounded-full font-bold uppercase tracking-wider text-[10px]">Vocación e Innovación</div>
+              <div class="inline-block bg-pink-100 text-pink-700 mb-6 px-4 py-1 rounded-full font-bold uppercase tracking-wider text-[10px]">Vocación e innovación</div>
               <h1 class="text-4xl lg:text-5xl font-black text-slate-900 mb-6 leading-tight">
                 Educación Infantil con enfoque en <span class="text-pink-600">bienestar e IA</span>.
               </h1>
               <p class="text-slate-600 max-w-xl text-lg leading-relaxed">
                 Maestra de Educación Infantil (UAH) e Investigadora (UNED). Especializada en metodologías activas y herramientas digitales.
               </p>
-              <button @click="currentSection = 'cv'" class="mt-10 bg-slate-900 text-white hover:bg-pink-600 transition-colors rounded-2xl px-10 py-4 font-bold shadow-lg">Ver mi Trayectoria</button>
+              <button @click="currentSection = 'cv'" class="mt-10 bg-slate-900 text-white hover:bg-pink-600 transition-colors rounded-2xl px-10 py-4 font-bold shadow-lg">Ver mi trayectoria</button>
             </div>
             <GraduationCapIcon :size="240" class="absolute right-[-40px] bottom-[-40px] opacity-[0.03] rotate-12 pointer-events-none text-slate-900" />
           </div>
 
           <!-- IMPACTO -->
           <div class="col-span-12 lg:col-span-4 bg-white p-8 rounded-[3rem] border border-slate-100 shadow-sm flex flex-col justify-center">
-            <h3 class="font-bold text-slate-400 mb-6 text-center uppercase text-[10px] tracking-widest">Impacto Académico</h3>
+            <h3 class="font-bold text-slate-400 mb-6 text-center uppercase text-[10px] tracking-widest">Impacto académico</h3>
             <ResearchStats />
           </div>
 
           <!-- HITOS (RESUMEN RÁPIDO) -->
           <div class="col-span-12 mt-4">
-            <h2 class="text-2xl font-black text-slate-800 mb-8">Hitos Significativos</h2>
+            <h2 class="text-2xl font-black text-slate-800 mb-8">Hitos significativos</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div class="p-8 rounded-[2.5rem] bg-white border border-slate-100 hover:border-pink-200 transition-all shadow-sm">
                 <span class="bg-pink-50 text-pink-600 text-[10px] font-black px-3 py-1 rounded-full uppercase">Investigación</span>
@@ -86,7 +86,7 @@
         <div v-if="currentSection === 'cv'" class="grid grid-cols-12 gap-10">
           <!-- Experiencia -->
           <div class="col-span-12 lg:col-span-7 space-y-8">
-            <h2 class="text-3xl font-black text-slate-900">Experiencia Profesional</h2>
+            <h2 class="text-3xl font-black text-slate-900">Experiencia profesional</h2>
             <div class="space-y-6">
               <div v-for="exp in experiencia" :key="exp.puesto" 
                 class="flex gap-8 p-6 rounded-[2rem] bg-slate-50/50 border border-slate-100 hover:bg-white hover:shadow-md transition-all">
@@ -104,7 +104,7 @@
           <div class="col-span-12 lg:col-span-5 space-y-10">
             <h2 class="text-3xl font-black text-slate-900">Habilidades</h2>
             <div class="bg-white p-8 rounded-[2.5rem] border border-slate-100 shadow-sm">
-              <h4 class="text-[10px] font-black text-slate-400 uppercase mb-8 text-center tracking-widest">Competencias Transversales</h4>
+              <h4 class="text-[10px] font-black text-slate-400 uppercase mb-8 text-center tracking-widest">Competencias transversales</h4>
               <div class="flex justify-around">
                 <div v-for="skill in transversalSkills" :key="skill.name" class="flex flex-col items-center gap-3">
                   <div class="relative w-16 h-16">
@@ -120,7 +120,7 @@
             </div>
             <!-- Formación Rápida -->
             <div class="bg-slate-900 text-white p-8 rounded-[2.5rem] shadow-xl">
-              <h4 class="text-pink-500 font-black text-xs uppercase mb-6">Formación Destacada</h4>
+              <h4 class="text-pink-500 font-black text-xs uppercase mb-6">Formación destacada</h4>
               <div class="space-y-6">
                 <div v-for="edu in formacion" :key="edu.titulo" class="border-l border-white/20 pl-4">
                   <p class="text-[10px] font-bold opacity-50">{{edu.fecha}}</p>
